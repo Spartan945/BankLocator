@@ -9,11 +9,18 @@
 /* Begin PBXBuildFile section */
 		7ED3E9031B78F76F007E3EF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3E9021B78F76F007E3EF5 /* main.m */; };
 		7ED3E9061B78F76F007E3EF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3E9051B78F76F007E3EF5 /* AppDelegate.m */; };
-		7ED3E9091B78F76F007E3EF5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3E9081B78F76F007E3EF5 /* ViewController.m */; };
+		7ED3E9091B78F76F007E3EF5 /* BankListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3E9081B78F76F007E3EF5 /* BankListViewController.m */; };
 		7ED3E90C1B78F76F007E3EF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7ED3E90A1B78F76F007E3EF5 /* Main.storyboard */; };
 		7ED3E90E1B78F76F007E3EF5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7ED3E90D1B78F76F007E3EF5 /* Images.xcassets */; };
 		7ED3E9111B78F76F007E3EF5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7ED3E90F1B78F76F007E3EF5 /* LaunchScreen.xib */; };
 		7ED3E91D1B78F76F007E3EF5 /* BankLocatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3E91C1B78F76F007E3EF5 /* BankLocatorTests.m */; };
+		7ED3E9281B78F836007E3EF5 /* Bank.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3E9271B78F836007E3EF5 /* Bank.m */; };
+		7ED3E92B1B78FBF7007E3EF5 /* BankDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3E92A1B78FBF7007E3EF5 /* BankDelegate.m */; };
+		7ED3E9301B792D5C007E3EF5 /* BankDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED3E92F1B792D5C007E3EF5 /* BankDetailViewController.m */; };
+		7ED401201B7A487200F72B1B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED4011F1B7A487200F72B1B /* CoreLocation.framework */; };
+		7ED401221B7A487B00F72B1B /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7ED401211B7A487B00F72B1B /* MapKit.framework */; };
+		7ED401251B7A491500F72B1B /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED401241B7A491500F72B1B /* MapViewController.m */; };
+		7ED401281B7A4F5B00F72B1B /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7ED401271B7A4F5B00F72B1B /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +39,26 @@
 		7ED3E9021B78F76F007E3EF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7ED3E9041B78F76F007E3EF5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7ED3E9051B78F76F007E3EF5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7ED3E9071B78F76F007E3EF5 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7ED3E9081B78F76F007E3EF5 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7ED3E9071B78F76F007E3EF5 /* BankListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BankListViewController.h; sourceTree = "<group>"; };
+		7ED3E9081B78F76F007E3EF5 /* BankListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BankListViewController.m; sourceTree = "<group>"; };
 		7ED3E90B1B78F76F007E3EF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7ED3E90D1B78F76F007E3EF5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7ED3E9101B78F76F007E3EF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		7ED3E9161B78F76F007E3EF5 /* BankLocatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BankLocatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7ED3E91B1B78F76F007E3EF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7ED3E91C1B78F76F007E3EF5 /* BankLocatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BankLocatorTests.m; sourceTree = "<group>"; };
+		7ED3E9261B78F836007E3EF5 /* Bank.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bank.h; sourceTree = "<group>"; };
+		7ED3E9271B78F836007E3EF5 /* Bank.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bank.m; sourceTree = "<group>"; };
+		7ED3E9291B78FBF7007E3EF5 /* BankDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankDelegate.h; sourceTree = "<group>"; };
+		7ED3E92A1B78FBF7007E3EF5 /* BankDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankDelegate.m; sourceTree = "<group>"; };
+		7ED3E92E1B792D5C007E3EF5 /* BankDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BankDetailViewController.h; sourceTree = "<group>"; };
+		7ED3E92F1B792D5C007E3EF5 /* BankDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BankDetailViewController.m; sourceTree = "<group>"; };
+		7ED4011F1B7A487200F72B1B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7ED401211B7A487B00F72B1B /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		7ED401231B7A491500F72B1B /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		7ED401241B7A491500F72B1B /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		7ED401261B7A4F5B00F72B1B /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MBProgressHUD.h; path = "../../EmployeeCoreData /SatesCoreData/MBProgressHUD.h"; sourceTree = "<group>"; };
+		7ED401271B7A4F5B00F72B1B /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MBProgressHUD.m; path = ../../StatesCoreData/SatesCoreData/MBProgressHUD.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +66,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ED401221B7A487B00F72B1B /* MapKit.framework in Frameworks */,
+				7ED401201B7A487200F72B1B /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +84,8 @@
 		7ED3E8F41B78F76F007E3EF5 = {
 			isa = PBXGroup;
 			children = (
+				7ED401211B7A487B00F72B1B /* MapKit.framework */,
+				7ED4011F1B7A487200F72B1B /* CoreLocation.framework */,
 				7ED3E8FF1B78F76F007E3EF5 /* BankLocator */,
 				7ED3E9191B78F76F007E3EF5 /* BankLocatorTests */,
 				7ED3E8FE1B78F76F007E3EF5 /* Products */,
@@ -81,10 +104,20 @@
 		7ED3E8FF1B78F76F007E3EF5 /* BankLocator */ = {
 			isa = PBXGroup;
 			children = (
+				7ED401261B7A4F5B00F72B1B /* MBProgressHUD.h */,
+				7ED401271B7A4F5B00F72B1B /* MBProgressHUD.m */,
 				7ED3E9041B78F76F007E3EF5 /* AppDelegate.h */,
 				7ED3E9051B78F76F007E3EF5 /* AppDelegate.m */,
-				7ED3E9071B78F76F007E3EF5 /* ViewController.h */,
-				7ED3E9081B78F76F007E3EF5 /* ViewController.m */,
+				7ED3E9071B78F76F007E3EF5 /* BankListViewController.h */,
+				7ED3E9081B78F76F007E3EF5 /* BankListViewController.m */,
+				7ED3E9261B78F836007E3EF5 /* Bank.h */,
+				7ED3E9271B78F836007E3EF5 /* Bank.m */,
+				7ED3E9291B78FBF7007E3EF5 /* BankDelegate.h */,
+				7ED3E92A1B78FBF7007E3EF5 /* BankDelegate.m */,
+				7ED3E92E1B792D5C007E3EF5 /* BankDetailViewController.h */,
+				7ED3E92F1B792D5C007E3EF5 /* BankDetailViewController.m */,
+				7ED401231B7A491500F72B1B /* MapViewController.h */,
+				7ED401241B7A491500F72B1B /* MapViewController.m */,
 				7ED3E90A1B78F76F007E3EF5 /* Main.storyboard */,
 				7ED3E90D1B78F76F007E3EF5 /* Images.xcassets */,
 				7ED3E90F1B78F76F007E3EF5 /* LaunchScreen.xib */,
@@ -219,9 +252,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7ED3E9091B78F76F007E3EF5 /* ViewController.m in Sources */,
+				7ED3E9091B78F76F007E3EF5 /* BankListViewController.m in Sources */,
+				7ED3E9281B78F836007E3EF5 /* Bank.m in Sources */,
 				7ED3E9061B78F76F007E3EF5 /* AppDelegate.m in Sources */,
+				7ED3E9301B792D5C007E3EF5 /* BankDetailViewController.m in Sources */,
 				7ED3E9031B78F76F007E3EF5 /* main.m in Sources */,
+				7ED3E92B1B78FBF7007E3EF5 /* BankDelegate.m in Sources */,
+				7ED401251B7A491500F72B1B /* MapViewController.m in Sources */,
+				7ED401281B7A4F5B00F72B1B /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +386,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BankLocator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -358,6 +397,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BankLocator/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -416,6 +456,7 @@
 				7ED3E9221B78F76F007E3EF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7ED3E9231B78F76F007E3EF5 /* Build configuration list for PBXNativeTarget "BankLocatorTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +465,7 @@
 				7ED3E9251B78F76F007E3EF5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

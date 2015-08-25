@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="DWI-sT-7PP">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Bank List-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="BankListViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,11 +15,164 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Vot-Ca-qSh">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BankCell" textLabel="5o4-mL-5uK" detailTextLabel="6XD-sO-vzc" style="IBUITableViewCellStyleSubtitle" id="v04-De-ga0" userLabel="Bank Cell">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="v04-De-ga0" id="gLN-gf-bc3">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5o4-mL-5uK">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6XD-sO-vzc">
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="ZMw-nm-TSF" kind="show" identifier="DetailView" id="mb2-lx-oLc"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vot-Ca-qSh" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="0vm-0M-YyF"/>
+                            <constraint firstItem="Vot-Ca-qSh" firstAttribute="bottom" secondItem="2fi-mo-0CV" secondAttribute="top" id="OdU-iq-zEb"/>
+                            <constraint firstItem="Vot-Ca-qSh" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="cCz-ap-hKb"/>
+                            <constraint firstAttribute="trailing" secondItem="Vot-Ca-qSh" secondAttribute="trailing" id="eBL-zI-Zac"/>
+                        </constraints>
                     </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Bank List" id="GFr-au-WR3">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="IYc-0M-nCH">
+                            <connections>
+                                <segue destination="Sa4-SF-kMv" kind="show" identifier="showMap" id="EBd-vH-mqC"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="Vot-Ca-qSh" id="XDd-Mf-UIp"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1142" y="359"/>
+        </scene>
+        <!--Bank Map-->
+        <scene sceneID="yX0-Sd-bPO">
+            <objects>
+                <viewController id="Sa4-SF-kMv" customClass="MapViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gqy-mU-UuU"/>
+                        <viewControllerLayoutGuide type="bottom" id="QkV-TS-xXi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="prC-5c-QUx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Ygp-QU-Qpv">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ygp-QU-Qpv" firstAttribute="leading" secondItem="prC-5c-QUx" secondAttribute="leading" id="LS8-CE-nko"/>
+                            <constraint firstItem="Ygp-QU-Qpv" firstAttribute="bottom" secondItem="QkV-TS-xXi" secondAttribute="top" id="ar8-Bx-BVz"/>
+                            <constraint firstAttribute="trailing" secondItem="Ygp-QU-Qpv" secondAttribute="trailing" id="mLS-CC-pXJ"/>
+                            <constraint firstItem="Ygp-QU-Qpv" firstAttribute="top" secondItem="prC-5c-QUx" secondAttribute="top" id="rz5-5h-AbK"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bank Map" id="Ncd-Cj-CNl"/>
+                    <connections>
+                        <outlet property="map" destination="Ygp-QU-Qpv" id="n1M-w4-ujh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7DQ-gk-F23" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878" y="-344"/>
+        </scene>
+        <!--Bank Details-->
+        <scene sceneID="PEi-yg-Gks">
+            <objects>
+                <viewController id="ZMw-nm-TSF" customClass="BankDetailViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aBr-j4-J6Q"/>
+                        <viewControllerLayoutGuide type="bottom" id="YHh-3f-Ndh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="U3c-pI-VaL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bank Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WwP-d2-iaZ">
+                                <rect key="frame" x="240" y="88" width="120" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="g0k-if-VWt"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UEU-M1-BVW">
+                                <rect key="frame" x="180" y="117" width="240" height="331"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="Tfg-G6-g1C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" address="YES"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WwP-d2-iaZ" firstAttribute="centerX" secondItem="UEU-M1-BVW" secondAttribute="centerX" id="RzX-9X-1CA"/>
+                            <constraint firstItem="YHh-3f-Ndh" firstAttribute="top" secondItem="UEU-M1-BVW" secondAttribute="bottom" constant="152" id="WeA-3p-Ye5"/>
+                            <constraint firstItem="WwP-d2-iaZ" firstAttribute="top" secondItem="aBr-j4-J6Q" secondAttribute="bottom" constant="24" id="dMa-7Z-R1Q"/>
+                            <constraint firstItem="UEU-M1-BVW" firstAttribute="top" secondItem="WwP-d2-iaZ" secondAttribute="bottom" constant="8" symbolic="YES" id="sT9-c4-cc2"/>
+                            <constraint firstItem="UEU-M1-BVW" firstAttribute="centerX" secondItem="U3c-pI-VaL" secondAttribute="centerX" id="tZC-Ye-QsE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Bank Details" id="fCC-6e-M7v"/>
+                    <connections>
+                        <outlet property="bankNameLabel" destination="WwP-d2-iaZ" id="fh8-FG-Ttr"/>
+                        <outlet property="textView" destination="UEU-M1-BVW" id="4S1-av-bPd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4S5-dv-6uj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1878" y="359"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ua9-oq-tN9">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DWI-sT-7PP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="8a5-dw-Rtm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="tZk-sk-mwc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SuU-PC-KDD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1142" y="-372"/>
         </scene>
     </scenes>
 </document>

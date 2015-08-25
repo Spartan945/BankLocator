@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Bank.h"
+#import "BankDelegate.h"
 
-@interface ViewController : UIViewController
+@interface BankListViewController : UIViewController <BankParseDelegate>
 
 
 @end
